@@ -1,0 +1,39 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXButton?>
+
+
+<AnchorPane fx:controller="sample.loginController"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="300.0" prefWidth="300.0">
+
+    <StackPane AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+        <ImageView fitWidth="300" fitHeight="300">
+            <image>
+                <Image url="/sample/Resources/Images/login image.png"/>
+            </image>
+        </ImageView>
+    </StackPane>
+
+    <GridPane alignment="CENTER" vgap="25" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30" AnchorPane.topAnchor="30">
+        <VBox GridPane.rowIndex="0" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXTextField fx:id="uname" promptText="Username" alignment="CENTER" focusColor="dodgerblue" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        </VBox>
+
+        <VBox GridPane.rowIndex="1" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXPasswordField fx:id="pass" promptText="Password" alignment="CENTER" focusColor="dodgerblue" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        </VBox>
+
+        <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="log" text="Login" buttonType="FLAT" textFill="green" textAlignment="CENTER" style="-fx-background-color: inherit" />
+            <JFXButton fx:id="exit" text="Exit" buttonType="FLAT" textFill="indianred" textAlignment="CENTER" style="-fx-background-color: inherit" />
+        </HBox>
+    </GridPane>
+</AnchorPane>
